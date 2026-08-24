@@ -11,9 +11,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Dashboard {
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient){
+    this.cargarpacientes();
+  }
 
   pacientes: any []=[];
+
+  modalabierto: boolean =false;
+  pacienteSelecciona: any =null;
 
   ngOnInit(){
     this.cargarpacientes();
@@ -26,5 +31,15 @@ export class Dashboard {
       this.pacientes =data.users;
       console.log(this.pacientes);
     });
+  }
+
+  verdetalle(paciente:any){
+    this.pacienteSelecciona = paciente;
+    this.modalabierto = true;
+  }
+
+  cerrarmodal(){
+    this.pacienteSelecciona = null;
+    this.modalabierto = false;
   }
 }

@@ -1,0 +1,175 @@
+.modal-overlay {
+  position: fixed;           /* 👈 CLAVE: Fija a la pantalla */
+  top: 0;                    /* 👈 Desde arriba */
+  left: 0;                   /* 👈 Desde la izquierda */
+  width: 100%;               /* Ancho completo */
+  height: 100%;              /* Alto completo */
+  background: rgba(0, 0, 0, 0.5);  /* Fondo oscurecido */
+  display: flex;             /* Para centrar contenido */
+  justify-content: center;   /* Centrar horizontalmente */
+  align-items: center;       /* Centrar verticalmente */
+  z-index: 1000;             /* Por encima de todo */
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  width: 600px;              /* Ancho del modal */
+  max-width: 90%;            /* Responsive */
+  max-height: 80vh;          /* Máximo 80% de la pantalla */
+  overflow-y: auto;          /* Scroll si hay mucho contenido */
+  padding: 0;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e9ecef;
+  background: #007bff;
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.modal-header .btn-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ==========================================
+   ESTILOS DE LA INFORMACIÓN DEL PACIENTE
+========================================== */
+.paciente-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.info-group {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-group label {
+  font-weight: 600;
+  color: #495057;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.info-group span {
+  color: #212529;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 768px) {
+  .table {
+    width: 100%;
+  }
+  
+  .modal-content {
+    width: 95%;
+  }
+  
+  .paciente-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+h1{
+    margin: 2rem;
+}
+
+/* ==========================================
+   TABLA CON SCROLL
+========================================== */
+.tabla-scroll {
+  max-height: 400px;        /* 👈 Altura máxima del contenedor */
+  overflow-y: auto;         /* 👈 Scroll vertical */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+/* Estilo de la tabla dentro del scroll */
+.tabla-scroll table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+/* Encabezado fijo (opcional) */
+.tabla-scroll thead {
+  position: sticky;         /* 👈 Hace que el encabezado se quede fijo */
+  top: 0;
+  background: #007bff;
+  color: white;
+  z-index: 1;
+}
+
+.tabla-scroll thead th {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.tabla-scroll tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-scroll tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.tabla-scroll tbody td {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+/* ==========================================
+   SCROLLBAR PERSONALIZADO 
+========================================== */
+.tabla-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tabla-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.tabla-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.tabla-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
