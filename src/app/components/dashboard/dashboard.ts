@@ -38,6 +38,14 @@ export class Dashboard {
     this.modalabierto = true;
   }
 
+  Actualizar(paciente: any){
+
+  }
+
+  Eliminar(paciente: any){
+
+  }
+
   cerrarmodal() {
     this.pacienteSelecciona = null;
     this.modalabierto = false;

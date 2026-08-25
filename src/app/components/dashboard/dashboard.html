@@ -21,9 +21,16 @@
                 <td>{{paciente.firstName}}</td>
                 <td>{{paciente.lastName}}</td>
                 <td>{{paciente.email}}</td>
-                <td> <button class="btn btn-primary btn-sm" (click)="verdetalle(paciente)">
+                <td > <button class="btn btn-primary btn-sm me-3 " (click)="verdetalle(paciente)">
                         Ver
-                    </button></td>
+                    </button>
+                    <button class="btn btn-danger btn-sm me-3" (click)="Eliminar(paciente)">
+                        Eliminar
+                    </button>
+                    <button class="btn btn-warning btn-sm" (click)="Actualizar(paciente)">
+                        Actualizar
+                    </button>
+                </td>
             </tr>
             }@empty {
             <tr colspan="32">CARGANDO PACIENTES...</tr>

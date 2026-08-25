@@ -112,11 +112,12 @@ h1{
    TABLA CON SCROLL
 ========================================== */
 .tabla-scroll {
-  max-height: 400px;        /* 👈 Altura máxima del contenedor */
+  max-height: auto;        /* 👈 Altura máxima del contenedor */
   overflow-y: auto;         /* 👈 Scroll vertical */
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
+  margin: 2rem;
 }
 
 /* Estilo de la tabla dentro del scroll */
