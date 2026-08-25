@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Header } from '../header/header';
 import { HttpClient } from '@angular/common/http';
 
@@ -11,34 +11,34 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Dashboard {
 
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient) {
+  }
+
+  pacientes = signal<any[]>([]);
+  modalabierto: boolean = false;
+  pacienteSelecciona: any = null;
+
+  ngOnInit() {
+    console.log('SE EJECUTÓ NGONINIT');
+
     this.cargarpacientes();
   }
 
-  pacientes: any []=[];
 
-  modalabierto: boolean =false;
-  pacienteSelecciona: any =null;
-
-  ngOnInit(){
-    this.cargarpacientes();
-  }
-
-
-  cargarpacientes(){
+  cargarpacientes() {
     this.http.get('https://dummyjson.com/users')
-    .subscribe((data:any) =>{
-      this.pacientes =data.users;
-      console.log(this.pacientes);
-    });
+      .subscribe((data: any) => {
+        this.pacientes.set(data.users);
+         console.log(this.pacientes);
+      });
   }
 
-  verdetalle(paciente:any){
+  verdetalle(paciente: any) {
     this.pacienteSelecciona = paciente;
     this.modalabierto = true;
   }
 
-  cerrarmodal(){
+  cerrarmodal() {
     this.pacienteSelecciona = null;
     this.modalabierto = false;
   }

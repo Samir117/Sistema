@@ -14,7 +14,7 @@
         </thead>
 
         <tbody>
-            @for (paciente of pacientes; track paciente.id) {
+            @for (paciente of pacientes(); track paciente.id) {
             <tr>
 
                 <td>{{paciente.id}}</td>
@@ -41,7 +41,7 @@
 
                 <!-- Encabezado del modal -->
                 <div class="modal-header">
-                    <h3>Datos del paciente</h3>
+                    <h1 class="col-start-auto">Datos del paciente</h1>
                     <!-- <button class="btn-close" (click)="cerrarmodal()">X</button> -->
                 </div>
 
