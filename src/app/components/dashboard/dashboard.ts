@@ -16,6 +16,8 @@ export class Dashboard {
 
   pacientes = signal<any[]>([]);
   modalabierto: boolean = false;
+  modalabiertoeditar: boolean = false;
+  modalborrar: boolean = false;
   pacienteSelecciona: any = null;
 
   ngOnInit() {
@@ -36,18 +38,29 @@ export class Dashboard {
   verdetalle(paciente: any) {
     this.pacienteSelecciona = paciente;
     this.modalabierto = true;
+    this.modalabiertoeditar =false;
+    this.modalborrar = false;
   }
 
   Actualizar(paciente: any){
-
+   this.pacienteSelecciona = paciente;
+    this.modalabiertoeditar = true;
+    this.modalabierto= false;
+    this.modalborrar =false;
   }
 
   Eliminar(paciente: any){
+   this.pacienteSelecciona = paciente;
+    this.modalabierto = false;
+    this.modalabiertoeditar =false;
+    this.modalborrar = true;
 
   }
 
   cerrarmodal() {
     this.pacienteSelecciona = null;
-    this.modalabierto = false;
+      this.modalabierto = false;
+    this.modalabiertoeditar =false;
+    this.modalborrar = false;
   }
 }
