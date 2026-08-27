@@ -1,15 +1,19 @@
 import { Component, signal } from '@angular/core';
 import { Header } from '../header/header';
 import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [Header],
+  imports: [Header,FormsModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
 export class Dashboard {
-  constructor(private http: HttpClient) {}
+  nombre: string ="";
+  apellido: string ="";
+
+  constructor(private http: HttpClient, ) {}
 
   pacientes = signal<any[]>([]);
   modalabierto: boolean = false;
@@ -17,7 +21,7 @@ export class Dashboard {
   modalborrar: boolean = false;
   pacienteSelecciona: any = null;
 
-  body: string = {};
+ 
 
   ngOnInit() {
     console.log('SE EJECUTÓ NGONINIT');
@@ -35,7 +39,8 @@ export class Dashboard {
   editarpacientes() {
     this.http.patch(
       `https://dummyjson.com/users/${this.pacienteSelecciona.id}`,
-      {lastName: 'awais'
+      {
+        
 
       }).subscribe((data: any) => {
         this.pacientes.set(data.users);

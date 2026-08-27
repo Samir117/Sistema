@@ -109,18 +109,14 @@
                 </div>
 
                 <!-- Contenido Modal -->
-                <div class="modal-body">
-
-                    <div class="paciente-info">
-                        <div class="info-group">
-                            <label>Nombre:</label>
-                            <span> {{pacienteSelecciona.firstName}}</span>
-                        </div>
-
-                        
-                    </div>
-
+          <form (ngSubmit)="editarpacientes()">
+             <div class="p-4">
+                   <label >{{pacienteSelecciona.firstName}}</label>
+               
+                 
                 </div>
+ 
+          </form>
                 <!-- Footer del modal -->
                 <div class="modal-footer">
                     <button class="btn-close" (click)="cerrarmodal()"> </button>
