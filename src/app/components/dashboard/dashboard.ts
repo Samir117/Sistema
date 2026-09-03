@@ -21,16 +21,16 @@ export class Dashboard {
   modalabiertoeditar: boolean = false;
   modalborrar: boolean = false;
   pacienteSelecciona: any = null;
+  textobuscar: string = '';
 
   ngOnInit() {
-    console.log('SE EJECUTÓ NGONINIT');
-
     this.cargarpacientes();
   }
 
   cargarpacientes() {
     this.http.get('https://dummyjson.com/users').subscribe((data: any) => {
       this.pacientes.set(data.users);
+      this.usuariosFiltrados.set(data.users);
       console.log(this.pacientes);
       this.crearGraficagenero();
       this.crearGraficamayorde30();
@@ -122,5 +122,19 @@ export class Dashboard {
     this.modalabierto = false;
     this.modalabiertoeditar = false;
     this.modalborrar = false;
+  }
+
+  usuariosFiltrados = signal<any[]>([]);
+
+  buscaruser() {
+    const texto = this.textobuscar.toLocaleLowerCase().trim();
+    this.usuariosFiltrados.set(
+      this.pacientes().filter(
+        (paciente) =>
+          paciente.firstName.toLowerCase().includes(texto) ||
+          paciente.lastName.toLowerCase().includes(texto) ||
+          paciente.username.toLowerCase().includes(texto),
+      ),
+    );
   }
 }
