@@ -1,268 +1,225 @@
-.modal-overlay {
-  position: fixed;
-  /* 👈 CLAVE: Fija a la pantalla */
-  top: 0;
-  /* 👈 Desde arriba */
-  left: 0;
-  /* 👈 Desde la izquierda */
-  width: 100%;
-  /* Ancho completo */
-  height: 100%;
-  /* Alto completo */
-  background: rgba(0, 0, 0, 0.5);
-  /* Fondo oscurecido */
+.container-padre {
   display: flex;
-  /* Para centrar contenido */
   justify-content: center;
-  /* Centrar horizontalmente */
-  align-items: center;
-  /* Centrar verticalmente */
-  z-index: 1000;
-  /* Por encima de todo */
+  gap: 2rem;
+  padding: 2rem;
+
 }
 
-.modal-content {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  width: 600px;
-  /* Ancho del modal */
-  max-width: 90%;
-  /* Responsive */
-  max-height: 80vh;
-  /* Máximo 80% de la pantalla */
-  overflow-y: auto;
-  /* Scroll si hay mucho contenido */
-  padding: 0;
+.container-izquierdo {
+  width: 30%;
+  border: none;
 }
 
-.modal-header {
+.card {
+  padding: 2rem;
+  row-gap: 1rem;
+  text-align: start;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+
+}
+
+.card input {
+  border-radius: 15px;
+  height: 2.5rem;
+  background-color: #eeeeee;
+  border: none;
+}
+
+.card select {
+  border-radius: 15px;
+  height: 2.5rem;
+  background-color: #eeeeee;
+  border: none;
+}
+
+.footer-card-izquierdo {
+  justify-content: end;
+  gap: 20px;
+  display: flex;
+
+}
+
+.footer-card-izquierdo button {
+  padding: 10px;
+
+}
+
+
+
+.container-derecho {
+  width: 70%;
+  row-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.btn1 {
+  background-color: #022b59;
+  border-radius: 15px;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  min-width: 100px;
+
+}
+
+.btn2 {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 10px 16px;
+  min-width: 100px;
+
+}
+
+.container-body {
+ 
+}
+
+.header-derecho {
+  min-height: 80px;
+  justify-content: center;
+}
+
+.header-derecho a {
+  color: #899097;
+  font-weight: 500;
+  cursor: pointer;
+
+
+}
+
+.header-derecho a:hover {
+  color: #022B59;
+  font-weight: 500;
+  border-bottom: 1px solid #022B59;
+  padding-bottom: 1px;
+  width: fit-content;
+
+}
+
+.search-form {
+  width: 100%;
+  text-align: start;
+  padding: 1rem;
+}
+
+.search-form:focus {
+  border-color: red;
+}
+
+.input-buscar {
+  position: relative;
+  width: 100%;
+}
+
+.input-buscar i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #022b59;
+  font-size: 18px;
+
+}
+
+.input-buscar input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  outline: none;
+
+}
+
+.header-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  border-bottom: 1px solid #e9ecef;
-  background: #007bff;
-  color: white;
-  border-radius: 12px 12px 0 0;
-}
-
-.modal-header h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.modal-header .btn-close {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  line-height: 1;
-}
-
-.modal-body {
-  padding: 20px;
-}
-
-.modal-footer {
-  padding: 15px 20px;
-  border-top: 1px solid #e9ecef;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-/* ==========================================
-   ESTILOS DE LA INFORMACIÓN DEL PACIENTE
-========================================== */
-.paciente-info {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 10px;
-}
-
-.info-group {
-  padding: 8px 0;
-  border-bottom: 1px solid #f0f0f0;
-}
-
-.info-group label {
-  font-weight: 600;
-  color: #495057;
-  display: block;
-  margin-bottom: 2px;
-}
-
-.info-group span {
-  color: #212529;
-}
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-@media (max-width: 768px) {
-  .table {
-    width: 100%;
-  }
-
-  .modal-content {
-    width: 95%;
-  }
-
-  .paciente-info {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-
-h1 {
-  margin: 2rem;
-}
-
-/* ==========================================
-   TABLA CON SCROLL
-========================================== */
-.tabla-scroll {
-  max-height: 500px;
-  overflow-y: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
-  margin: 2rem;
-}
-
-/* Estilo de la tabla dentro del scroll */
-.tabla-scroll table {
   width: 100%;
-  margin: 0;
-  border-collapse: collapse;
+
 }
 
-/* Encabezado fijo (opcional) */
-.tabla-scroll thead {
-  position: sticky;
-  /* 👈 Hace que el encabezado se quede fijo */
-  top: 0;
-  background: #007bff;
-  color: white;
-  z-index: 1;
+.borrar {
+  cursor: pointer;
+  font-weight: 600;
+  color: #3f93fb;
 }
 
-.tabla-scroll thead th {
-  padding: 12px 15px;
-  text-align: center;
+.borrar:hover {
+  color: #FA3E3E;
 }
 
-.tabla-scroll tbody tr {
-  border-bottom: 1px solid #ddd;
+.title {
+  font-weight: 600;
+  color: #899097;
 }
 
-.tabla-scroll tbody tr:hover {
-  background-color: #f8f9fa;
-}
-
-.tabla-scroll tbody td {
-  padding: 10px 15px;
-  text-align: center;
-}
-
-/* ==========================================
-   SCROLLBAR PERSONALIZADO 
-========================================== */
-.tabla-scroll::-webkit-scrollbar {
-  width: 8px;
-}
-
-.tabla-scroll::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.tabla-scroll::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.tabla-scroll::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-
-.line {
-  margin: 4rem;
-  border: solid 2px gray;
-  border-radius: 50px;
-  background: #e0e0e0;
-  box-shadow: 6px 6px 12px #676767,
-    -6px -6px 12px #ffffff;
-}
-
-.contenedor-graficas {
-  align-items: center;
+.body-formato {
+  margin-top: 2rem;
   display: flex;
+  gap: 20px;
+
+}
+
+.titulo {
+  font-weight: 600;
+  color: #899097;
+}
+
+.consulta-externa,
+.hospitalizacion {
+  text-align: left;
+  font-weight: 600;
+  color: #899097;
+  width: 40%;
+}
+
+.separador {
+  border-left: 1px solid #899097;
   justify-content: center;
-  gap: 40px;
-  margin: 5rem;
-
-
+  margin: 1rem;
+}
+.permisos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
-.graficaPacientes {
-  width: auto;
-  box-shadow: 8px 10px 36px 2px rgba(0, 0, 0, 0.39);
-  -webkit-box-shadow: 8px 10px 36px 2px rgba(0, 0, 0, 0.39);
-  -moz-box-shadow: 8px 10px 36px 2px rgba(0, 0, 0, 0.39);
+.permisos-hospital{
+  margin-top: 2rem;
 }
 
-
-
-.graficaedad {
-  width: auto;
-  box-shadow: 8px 10px 36px 2px rgba(0, 0, 0, 0.39);
-  -webkit-box-shadow: 8px 10px 36px 2px rgba(0, 0, 0, 0.39);
-  -moz-box-shadow: 8px 10px 36px 2px rgba(0, 0, 0, 0.39);
-}
-
-
-
-
-.buscarpacientes:focus {
-  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.15);
-
-}
-
-.buscarpacientes {
-  position: relative;
-  margin: 2rem;
-  width: 20%;
-}
-
-.btn-buscar {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 40px;
-  height: 40px;
-
-  padding: 0;
+.permisos button {
   border: none;
-  border-radius: 8px;
-
-  background-color: #0d6efd;
-  color: white;
-
-  z-index: 10;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: #212529;
+  transition: all 0.2s ease;
 }
 
-.btn-buscar:hover {
-  background-color: #0a58ca;
+/* Hover */
+.permisos button:hover {
+  background: #d1e7dd;
+  color: #146c43;
+}
+
+/* Activo */
+.permisos.activo button {
+  background: #d1e7dd;
+  color: #146c43;
+  font-weight: 600;
+}
+
+/* Icono activo */
+.permisos.activo i {
+  color: #198754;
 }

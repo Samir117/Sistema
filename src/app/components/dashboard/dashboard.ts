@@ -1,9 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { Header } from '../header/header';
-import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Chart } from 'chart.js/auto';
-
+import { HttpClient } from '@angular/common/http';
+interface Permiso {
+  id: number;
+  nombre: string;
+}
 @Component({
   selector: 'app-dashboard',
   imports: [Header, FormsModule],
@@ -13,15 +16,11 @@ import { Chart } from 'chart.js/auto';
 export class Dashboard {
   nombre: string = '';
   apellido: string = '';
-
-  constructor(private http: HttpClient) {}
-
+  usuariosFiltrados = signal<any[]>([]);
   pacientes = signal<any[]>([]);
-  modalabierto: boolean = false;
-  modalabiertoeditar: boolean = false;
-  modalborrar: boolean = false;
-  pacienteSelecciona: any = null;
-  textobuscar: string = '';
+  id: number;
+  nombrepermiso: string;
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.cargarpacientes();
@@ -31,19 +30,10 @@ export class Dashboard {
     this.http.get('https://dummyjson.com/users').subscribe((data: any) => {
       this.pacientes.set(data.users);
       this.usuariosFiltrados.set(data.users);
-      console.log(this.pacientes);
       this.crearGraficagenero();
       this.crearGraficamayorde30();
+      console.log(this.pacientes);
     });
-  }
-
-  editarpacientes() {
-    this.http
-      .patch(`https://dummyjson.com/users/${this.pacienteSelecciona.id}`, {})
-      .subscribe((data: any) => {
-        this.pacientes.set(data.users);
-        console.log(this.pacientes);
-      });
   }
 
   crearGraficagenero() {
@@ -68,6 +58,19 @@ export class Dashboard {
       },
       options: {
         responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Grafica de Hombres y Mujeres',
+            color: '#4776BF',
+            font: {
+              size: 16,
+              family: 'tahoma',
+              weight: 'bold',
+              style: 'normal',
+            },
+          },
+        },
       },
     });
   }
@@ -96,45 +99,39 @@ export class Dashboard {
     });
   }
 
-  verdetalle(paciente: any) {
-    this.pacienteSelecciona = paciente;
-    this.modalabierto = true;
-    this.modalabiertoeditar = false;
-    this.modalborrar = false;
+  permisosDisponibles: Permiso[] = [
+    { id: 1, nombre: 'Crear usuarios' },
+    { id: 2, nombre: 'Editar usuarios' },
+    { id: 3, nombre: 'Eliminar usuarios' },
+    { id: 4, nombre: 'Consultar usuarios' },
+    { id: 5, nombre: 'Usuarios' },
+    { id: 6, nombre: 'Cambiar contrasñea' },
+    { id: 7, nombre: 'Gestionar usuarios' },
+  ];
+
+  permisosActivos: Permiso[] = [];
+
+  activarPermiso(permiso: any) {
+    const yaActivo = this.permisosActivos.some((p) => p.id == permiso.id);
+    if (yaActivo) {
+      this.permisosActivos = this.permisosActivos.filter((p) => p.id !== permiso.id);
+    } else {
+      this.permisosActivos.push(permiso);
+    }
+  }
+  desactivarPermiso(permiso: any) {
+    this.permisosActivos = this.permisosActivos.filter((p) => p.id !== permiso.id);
   }
 
-  Actualizar(paciente: any) {
-    this.pacienteSelecciona = paciente;
-    this.modalabiertoeditar = true;
-    this.modalabierto = false;
-    this.modalborrar = false;
+  contenidoActivo: string = 'Detalles';
+
+  cambiarContenido(contenido: string): void {
+    this.contenidoActivo = contenido;
   }
 
-  Eliminar(paciente: any) {
-    this.pacienteSelecciona = paciente;
-    this.modalabierto = false;
-    this.modalabiertoeditar = false;
-    this.modalborrar = true;
-  }
-
-  cerrarmodal() {
-    this.pacienteSelecciona = null;
-    this.modalabierto = false;
-    this.modalabiertoeditar = false;
-    this.modalborrar = false;
-  }
-
-  usuariosFiltrados = signal<any[]>([]);
-
-  buscaruser() {
-    const texto = this.textobuscar.toLocaleLowerCase().trim();
-    this.usuariosFiltrados.set(
-      this.pacientes().filter(
-        (paciente) =>
-          paciente.firstName.toLowerCase().includes(texto) ||
-          paciente.lastName.toLowerCase().includes(texto) ||
-          paciente.username.toLowerCase().includes(texto),
-      ),
-    );
-  }
+  estaActivo(permiso: any): boolean {
+  return this.permisosActivos.some(
+    (p: any) => p.id === permiso.id
+  );
+}
 }
