@@ -1,42 +1,57 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/dashboard">Sistema</a>
-    <a class="navbar-brand" routerLink="/pacientes">Pacientes</a>
+<header class="header">
+  <button class="btn-menu" (click)="toggleSidebar()">
+    <i class="bi bi-list"></i>
+  </button>
 
-    
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-
-        <ul class="navbar-nav ms-auto">
-        <li class="nav-item dropdown">
-          <button
-            class="nav-link dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {{ usuario.firstName }} {{ usuario.lastName }}
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" routerLink="/changepassword">Cambiar Contraseña</a></li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+  <div class="header-titulo">
+    <span>Sistema de Gestión</span>
   </div>
-</nav>
+  <div class="header-titulo">
+    <span class="avatar"> <img [src]="usuario?.image" alt="" /> </span>
 
+    <span>{{ usuario.firstName }} {{ usuario.lastName }}</span>
+  </div>
+</header>
+
+<!-- Sidebar -->
+<aside class="sidebar" [class.abierto]="sidebarAbierto()">
+  <div class="sidebar-header">
+    <h4>Menú</h4>
+
+    <button class="btn-cerrar" (click)="cerrarSidebar()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
+  <nav class="sidebar-menu">
+    <a href="#">
+      <i class="bi bi-house"></i>
+      <span>Inicio</span>
+    </a>
+
+    <a href="#">
+      <i class="bi bi-people"></i>
+      <span>Usuarios</span>
+    </a>
+
+    <a href="#">
+      <i class="bi bi-person-vcard"></i>
+      <span>Pacientes</span>
+    </a>
+
+    <a href="#">
+      <i class="bi bi-shield-check"></i>
+      <span>Permisos</span>
+    </a>
+
+    <a href="#">
+      <i class="bi bi-gear"></i>
+      <span>Configuración</span>
+    </a>
+  </nav>
+</aside>
+
+<!-- Fondo cuando el sidebar está abierto -->
+@if (sidebarAbierto()) {
+  <div class="overlay" (click)="cerrarSidebar()"></div>
+}

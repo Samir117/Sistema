@@ -3,6 +3,7 @@ import { Header } from '../header/header';
 import { FormsModule } from '@angular/forms';
 import { Chart } from 'chart.js/auto';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 interface Permiso {
   id: number;
   nombre: string;
@@ -18,6 +19,7 @@ interface PermisoExt {
   styleUrl: './dashboard.css',
 })
 export class Dashboard {
+  numdoc: string = '';
   nombre: string = '';
   apellido: string = '';
   usuariosFiltrados = signal<any[]>([]);
@@ -174,5 +176,44 @@ export class Dashboard {
 
   estaActivoExt(permisoExt: any): boolean {
     return this.permisosActivosExt.some((p: any) => p.id === permisoExt.id);
+  }
+
+  desactivarTodosLosPermisos(): void {
+    if (this.permisosActivos.length == 0 && this.permisosActivosExt.length == 0) {
+      Swal.fire({
+        title: 'Ya estan desactivados todos los permisos',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    } else {
+      this.permisosActivos = [];
+      this.permisosActivosExt = [];
+      Swal.fire({
+        title: 'Permisos Desactivados',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    }
+  }
+
+  limpiar(): void {
+    if (this.numdoc == '') {
+      Swal.fire({
+        title: 'Ya esta vacio',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    } else {
+      this.numdoc = '';
+      Swal.fire({
+        title: 'Borrado con exito',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    }
   }
 }

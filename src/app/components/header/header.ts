@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
 @Component({
   selector: 'app-header',
@@ -9,6 +9,7 @@ import { RouterLink } from "@angular/router";
 export class Header {
   menuabierto = false;
   usuario: any;
+  sidebarAbierto = signal(false);
   constructor(
   ) {
 
@@ -18,6 +19,12 @@ export class Header {
     }
   }
 
+  toggleSidebar():void{
+    this.sidebarAbierto.update(valor => !valor);
+  }
+  cerrarSidebar():void{
+    this.sidebarAbierto.set(false);
+  }
   menu() {
     this.menuabierto = !this.menuabierto;
   }
@@ -31,6 +38,8 @@ export class Header {
 
   return firstInitial + lastInitial;
 }
+
+
 
 
 

@@ -77,6 +77,13 @@
 
 }
 
+.btn2:hover {
+  background-color: #FA3E3E;
+  color: white;
+  transition: all 0.25s ease;
+
+}
+
 
 .header-derecho {
   min-height: 80px;
@@ -166,7 +173,7 @@
 .titulo {
   font-weight: 600;
   color: #899097;
-  
+
 }
 
 .consulta-externa,
@@ -176,12 +183,13 @@
   color: #899097;
   display: flex;
 }
+
 .separador {
   border: 1px solid #899097;
   justify-content: center;
   margin-right: 2rem;
   margin-top: 2rem;
-  height: 300px;
+  height: auto;
 }
 
 
@@ -198,7 +206,7 @@
   gap: 2px;
   display: flex;
   width: 100%;
-    column-gap: 20px;
+  column-gap: 20px;
 
 }
 
@@ -233,10 +241,29 @@
   margin-right: 5px;
 }
 
-.container-body{
+.container-body {
   min-height: 500px;
   align-items: center;
   display: flex;
   align-items: center;
 }
 
+@media (max-width:950px) {
+
+  .container-padre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-izquierdo,
+  .container-derecho {
+    width: 100%;
+    height: auto;
+  }
+
+  .separador{
+    height: auto;
+  }
+}

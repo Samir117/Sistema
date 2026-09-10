@@ -80,10 +80,10 @@
 
       <div class="mb-3">
         <label style="color: #022b59; font-weight: 700">Numero de Documento</label>
-        <input type="number" class="form-control" />
+        <input [(ngModel)]="numdoc" type="number" class="form-control" />
       </div>
       <div class="footer-card-izquierdo">
-        <button class="btn2">Limpiar</button>
+        <button (click)="limpiar()" class="btn2">Limpiar</button>
         <button class="btn1">Buscar</button>
       </div>
     </div>
@@ -136,7 +136,7 @@
       @if (contenidoActivo == 'Formatos') {
         <div class="header-body">
           <span class="title">PERMISOS DE FORMATOS</span>
-          <span class="borrar">Borrar todos</span>
+          <span class="borrar" (click)="desactivarTodosLosPermisos()">Borrar todos</span>
         </div>
         <div class="input-buscar">
           <i class="bi bi-search"></i>
