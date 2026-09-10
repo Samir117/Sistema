@@ -7,7 +7,7 @@
     <span>Sistema de Gestión</span>
   </div>
   <div class="header-titulo">
-    <span class="avatar"> <img [src]="usuario?.image" alt="" /> </span>
+    <span (click)="toggleAvatar()" class="avatar"> <img [src]="usuario?.image" alt="" /> </span>
 
     <span>{{ usuario.firstName }} {{ usuario.lastName }}</span>
   </div>
@@ -55,3 +55,5 @@
 @if (sidebarAbierto()) {
   <div class="overlay" (click)="cerrarSidebar()"></div>
 }
+
+

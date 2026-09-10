@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { sign } from 'chart.js/helpers';
 @Component({
   selector: 'app-header',
   imports: [RouterLink],
@@ -10,6 +11,7 @@ export class Header {
   menuabierto = false;
   usuario: any;
   sidebarAbierto = signal(false);
+  avatarAbierto = signal(false);
   constructor(
   ) {
 
@@ -39,7 +41,14 @@ export class Header {
   return firstInitial + lastInitial;
 }
 
+toggleAvatar():void{
+  this.avatarAbierto.update(valor => !valor);
 
+}
+
+cerrarAvatar(): void{
+  this.avatarAbierto.set(false);
+}
 
 
 

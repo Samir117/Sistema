@@ -7,6 +7,10 @@
     background-color: white;
 }
 
+.avatar {
+    cursor: pointer;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -59,6 +63,8 @@
 
     transition: left 0.3s ease;
 }
+
+
 
 .sidebar.abierto {
     left: 0;
