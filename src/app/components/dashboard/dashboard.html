@@ -80,10 +80,10 @@
 
       <div class="mb-3">
         <label style="color: #022b59; font-weight: 700">Numero de Documento</label>
-        <input type="number" class="form-control" />
+        <input [(ngModel)]="numdoc" type="number" class="form-control" />
       </div>
       <div class="footer-card-izquierdo">
-        <button class="btn2">Limpiar</button>
+        <button (click)="limpiar()" class="btn2">Limpiar</button>
         <button class="btn1">Buscar</button>
       </div>
     </div>
@@ -136,7 +136,7 @@
       @if (contenidoActivo == 'Formatos') {
         <div class="header-body">
           <span class="title">PERMISOS DE FORMATOS</span>
-          <span class="borrar">Borrar todos</span>
+          <span class="borrar" (click)="desactivarTodosLosPermisos()">Borrar todos</span>
         </div>
         <div class="input-buscar">
           <i class="bi bi-search"></i>
@@ -152,7 +152,7 @@
         <div class="body-formato">
           <div class="hospitalizacion">
             <div class="titulo">
-              <span>Hospitalización</span>
+              <h5>Hospitalización</h5>
               <div class="permisos-hospital">
                 @for (permiso of permisosDisponibles; track permiso.id) {
                   <div class="permisos" [class.activo]="estaActivo(permiso)">
@@ -170,7 +170,19 @@
           <div class="separador"></div>
           <div class="consultaexterna">
             <div class="titulo">
-              <span>Consulta Externa</span>
+              <h5>Consulta Externa</h5>
+                     <div class="permisos-hospital">
+                @for (permisoExt of permisosDisponiblesExt; track permisoExt.id) {
+                  <div class="permisos" [class.activo]="estaActivoExt(permisoExt)">
+                    <button class="btn" (click)="activarPermisoExt(permisoExt)">
+                      @if (estaActivoExt(permisoExt)) {
+                        <i class="bi bi-check-circle"></i>
+                      }
+                      <span>{{ permisoExt.nombre }}</span>
+                    </button>
+                  </div>
+                }
+              </div>
             </div>
           </div>
         </div>

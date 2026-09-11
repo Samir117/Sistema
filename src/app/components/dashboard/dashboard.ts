@@ -3,7 +3,12 @@ import { Header } from '../header/header';
 import { FormsModule } from '@angular/forms';
 import { Chart } from 'chart.js/auto';
 import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 interface Permiso {
+  id: number;
+  nombre: string;
+}
+interface PermisoExt {
   id: number;
   nombre: string;
 }
@@ -14,6 +19,7 @@ interface Permiso {
   styleUrl: './dashboard.css',
 })
 export class Dashboard {
+  numdoc: string = '';
   nombre: string = '';
   apellido: string = '';
   usuariosFiltrados = signal<any[]>([]);
@@ -100,13 +106,27 @@ export class Dashboard {
   }
 
   permisosDisponibles: Permiso[] = [
-    { id: 1, nombre: 'Crear usuarios' },
-    { id: 2, nombre: 'Editar usuarios' },
-    { id: 3, nombre: 'Eliminar usuarios' },
+    { id: 1, nombre: 'Historia Clinica Urgencias' },
+    { id: 2, nombre: 'Evolucion Medica' },
+    { id: 3, nombre: 'Historia Clinica de UCI' },
     { id: 4, nombre: 'Consultar usuarios' },
     { id: 5, nombre: 'Usuarios' },
-    { id: 6, nombre: 'Cambiar contrasñea' },
-    { id: 7, nombre: 'Gestionar usuarios' },
+    { id: 6, nombre: 'contraseña' },
+    { id: 7, nombre: 'Gestionar Formatos' },
+    { id: 8, nombre: 'Gestionar Historias' },
+    { id: 9, nombre: 'Gestionar contraseñas' },
+  ];
+
+  permisosDisponiblesExt: PermisoExt[] = [
+    { id: 1, nombre: 'Historia Clinica Urgencias Ext' },
+    { id: 2, nombre: 'Evolucion Medica Ext' },
+    { id: 3, nombre: 'Historia Clinica de UCI Ext' },
+    { id: 4, nombre: 'Consultar usuarios Ext' },
+    { id: 5, nombre: 'Usuarios Ext' },
+    { id: 6, nombre: 'contraseña' },
+    { id: 7, nombre: 'Gestionar Formatos Ext' },
+    { id: 8, nombre: 'Gestionar Historias Ext' },
+    { id: 9, nombre: 'Gestionar contraseñas Ext' },
   ];
 
   permisosActivos: Permiso[] = [];
@@ -119,6 +139,7 @@ export class Dashboard {
       this.permisosActivos.push(permiso);
     }
   }
+
   desactivarPermiso(permiso: any) {
     this.permisosActivos = this.permisosActivos.filter((p) => p.id !== permiso.id);
   }
@@ -130,8 +151,69 @@ export class Dashboard {
   }
 
   estaActivo(permiso: any): boolean {
-  return this.permisosActivos.some(
-    (p: any) => p.id === permiso.id
-  );
-}
+    return this.permisosActivos.some((p: any) => p.id === permiso.id);
+  }
+
+  /**----------------------------------------------------------------------------*/
+  permisosActivosExt: PermisoExt[] = [];
+  activarPermisoExt(permisoExt: any) {
+    const yaActivo = this.permisosActivosExt.some((p) => p.id == permisoExt.id);
+    if (yaActivo) {
+      this.permisosActivosExt = this.permisosActivosExt.filter((p) => p.id !== permisoExt.id);
+    } else {
+      this.permisosActivosExt.push(permisoExt);
+    }
+  }
+  desactivarPermisoExt(permisoExt: any) {
+    this.permisosActivosExt = this.permisosActivosExt.filter((p) => p.id !== permisoExt.id);
+  }
+
+  contenidoActivoExt: string = 'Detalles';
+
+  cambiarContenidoExt(contenido: string): void {
+    this.contenidoActivoExt = contenido;
+  }
+
+  estaActivoExt(permisoExt: any): boolean {
+    return this.permisosActivosExt.some((p: any) => p.id === permisoExt.id);
+  }
+
+  desactivarTodosLosPermisos(): void {
+    if (this.permisosActivos.length == 0 && this.permisosActivosExt.length == 0) {
+      Swal.fire({
+        title: 'Ya estan desactivados todos los permisos',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    } else {
+      this.permisosActivos = [];
+      this.permisosActivosExt = [];
+      Swal.fire({
+        title: 'Permisos Desactivados',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    }
+  }
+
+  limpiar(): void {
+    if (this.numdoc == '') {
+      Swal.fire({
+        title: 'Ya esta vacio',
+        icon: 'error',
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    } else {
+      this.numdoc = '';
+      Swal.fire({
+        title: 'Borrado con exito',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    }
+  }
 }

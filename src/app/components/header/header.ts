@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { sign } from 'chart.js/helpers';
 @Component({
   selector: 'app-header',
   imports: [RouterLink],
@@ -9,6 +10,8 @@ import { RouterLink } from "@angular/router";
 export class Header {
   menuabierto = false;
   usuario: any;
+  sidebarAbierto = signal(false);
+  avatarAbierto = signal(false);
   constructor(
   ) {
 
@@ -18,6 +21,12 @@ export class Header {
     }
   }
 
+  toggleSidebar():void{
+    this.sidebarAbierto.update(valor => !valor);
+  }
+  cerrarSidebar():void{
+    this.sidebarAbierto.set(false);
+  }
   menu() {
     this.menuabierto = !this.menuabierto;
   }
@@ -30,6 +39,15 @@ export class Header {
   const lastInitial = lastName.charAt(0).toUpperCase();
 
   return firstInitial + lastInitial;
+}
+
+toggleAvatar():void{
+  this.avatarAbierto.update(valor => !valor);
+
+}
+
+cerrarAvatar(): void{
+  this.avatarAbierto.set(false);
 }
 
 

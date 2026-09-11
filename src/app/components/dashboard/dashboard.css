@@ -77,9 +77,13 @@
 
 }
 
-.container-body {
- 
+.btn2:hover {
+  background-color: #FA3E3E;
+  color: white;
+  transition: all 0.25s ease;
+
 }
+
 
 .header-derecho {
   min-height: 80px;
@@ -164,12 +168,12 @@
   margin-top: 2rem;
   display: flex;
   gap: 20px;
-
 }
 
 .titulo {
   font-weight: 600;
   color: #899097;
+
 }
 
 .consulta-externa,
@@ -177,14 +181,18 @@
   text-align: left;
   font-weight: 600;
   color: #899097;
-  width: 40%;
+  display: flex;
 }
 
 .separador {
-  border-left: 1px solid #899097;
+  border: 1px solid #899097;
   justify-content: center;
-  margin: 1rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  height: auto;
 }
+
+
 .permisos {
   display: flex;
   align-items: center;
@@ -192,8 +200,14 @@
   margin-bottom: 10px;
 }
 
-.permisos-hospital{
+.permisos-hospital {
   margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 2px;
+  display: flex;
+  width: 100%;
+  column-gap: 20px;
+
 }
 
 .permisos button {
@@ -201,9 +215,11 @@
   background: transparent;
   cursor: pointer;
   padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: 5px;
   color: #212529;
+  flex: 1 1 calc(30% - 10px);
   transition: all 0.2s ease;
+  border: 1px solid #899097;
 }
 
 /* Hover */
@@ -222,4 +238,32 @@
 /* Icono activo */
 .permisos.activo i {
   color: #198754;
+  margin-right: 5px;
+}
+
+.container-body {
+  min-height: 500px;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width:950px) {
+
+  .container-padre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-izquierdo,
+  .container-derecho {
+    width: 100%;
+    height: auto;
+  }
+
+  .separador{
+    height: auto;
+  }
 }
