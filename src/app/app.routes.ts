@@ -10,6 +10,5 @@ export const routes: Routes = [
     {path:'', component:Login},
     {path: 'changepassword',component: Changepassword},
     {path: 'pacientes',component: Pacientes},
-    
     {path: '**', redirectTo:'/login'}
 ];

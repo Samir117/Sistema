@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Chart } from 'chart.js/auto';
 import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';
+import { PruebaReporteComponent } from '../../prueba-reporte/prueba.component'
 interface Permiso {
   id: number;
   nombre: string;
@@ -14,7 +15,7 @@ interface PermisoExt {
 }
 @Component({
   selector: 'app-dashboard',
-  imports: [Header, FormsModule],
+  imports: [Header, FormsModule, PruebaReporteComponent],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })

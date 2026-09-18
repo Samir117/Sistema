@@ -1,0 +1,56 @@
+<!-- src/app/features/reportes/viewer/viewer.component.html -->
+<div class="report-container">
+  
+  <!-- Encabezado del Módulo -->
+  <div class="report-header">
+    <h2>Visor General de Reportes</h2>
+    <p>Generación y maquetación de documentos en tiempo real</p>
+  </div>
+  
+  <!-- Panel de Control / Acciones -->
+  <div class="report-actions">
+    <button 
+      class="btn-generate" 
+      (click)="ejecutarPruebaLocal()" 
+      [disabled]="cargando()">
+      
+      @if (cargando()) {
+        <span class="spinner"></span> Generando PDF...
+      } @else {
+        🔥 Lanzar Prueba de PDF
+      }
+    </button>
+  </div>
+
+  <!-- Zona de Visualización Dinámica -->
+  <div class="report-viewer-card" [class.loading-active]="cargando()">
+    
+    <!-- Estado 1: Procesando en Servidor Node / jsreport -->
+    @if (cargando()) {
+      <div class="status-message">
+        <div class="loading-icon">⏳</div>
+        <p>El motor local de jsreport está fabricando el PDF en memoria...</p>
+        <span class="subtext">Bypass Activo: 0 de 5 plantillas en disco</span>
+      </div>
+    }
+
+    <!-- Estado 2: PDF listo y recibido del Servicio -->
+    @if (pdfUrl(); as url) {
+      <iframe 
+        [src]="url" 
+        title="Visor de Reporte Corporativo" 
+        class="pdf-iframe">
+      </iframe>
+    } 
+    
+    <!-- Estado 3: Pantalla Vacía (A la espera del Clic) -->
+    @if (!pdfUrl() && !cargando()) {
+      <div class="status-message placeholder">
+        <div class="placeholder-icon">📄</div>
+        <p>Ningún documento solicitado</p>
+        <span class="subtext">Haga clic en el botón superior para compilar el reporte al vuelo.</span>
+      </div>
+    }
+
+  </div>
+</div>

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"ng serve --port 4200\" \"node jsreport-server.js\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -19,10 +19,16 @@
     "@angular/router": "^21.2.0",
     "@popperjs/core": "^2.11.8",
     "angular-material": "^1.2.5",
+    "ankareport": "^0.1.0-beta.19",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "chart.js": "^4.5.1",
+    "handlebars": "^4.7.9",
+    "html2canvas": "^1.4.1",
     "jquery": "^4.0.0",
+    "jspdf": "^4.2.1",
+    "node": "^26.9.0",
+    "pdfmake": "^0.3.11",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.26.25",
     "tslib": "^2.3.0"
@@ -31,7 +37,11 @@
     "@angular/build": "^21.2.21",
     "@angular/cli": "^21.2.21",
     "@angular/compiler-cli": "^21.2.0",
+    "@types/handlebars": "^4.0.40",
+    "@types/pdfmake": "^0.3.3",
+    "concurrently": "^10.0.5",
     "jsdom": "^28.0.0",
+    "jsreport": "^4.14.2",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
