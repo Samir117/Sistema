@@ -1,9 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { RouterLink } from "@angular/router";
-import { sign } from 'chart.js/helpers';
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })

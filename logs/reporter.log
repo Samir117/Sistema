@@ -1,0 +1,515 @@
+2026-09-17T22:00:21.201Z - info: Initializing jsreport (version: 4.14.2, configuration file: none, nodejs: 26.9.0)
+2026-09-17T22:00:21.204Z - info: Searching for available extensions in C:\Users\CCOSTA428\Documents\Samir\Sistema\
+2026-09-17T22:00:21.213Z - info: Extensions location cache doesn't contain entry yet, crawling
+2026-09-17T22:00:31.699Z - info: Found 35 extension(s)
+2026-09-17T22:00:32.452Z - debug: Writing extension locations cache to C:\Users\CCOSTA~1\AppData\Local\Temp\jsreport\core\locations.json
+2026-09-17T22:00:32.453Z - debug: Discovered 35 extensions
+2026-09-17T22:00:32.486Z - info: Using extension authentication@4.3.3
+2026-09-17T22:00:36.967Z - debug: Extension authentication@4.3.3 was disabled
+2026-09-17T22:00:36.967Z - info: Using extension base@4.1.0
+2026-09-17T22:00:36.979Z - info: Using extension child-templates@4.2.0
+2026-09-17T22:00:36.982Z - info: Using extension cli@4.2.3
+2026-09-17T22:00:36.986Z - info: Using extension components@4.1.0
+2026-09-17T22:00:36.991Z - info: Using extension data@4.2.0
+2026-09-17T22:00:36.993Z - info: Using extension express@4.3.4
+2026-09-17T22:00:45.150Z - info: Using extension freeze@4.1.0
+2026-09-17T22:00:45.172Z - info: Using extension fs-store@4.2.1
+2026-09-17T22:00:47.550Z - debug: Extension fs-store@4.2.1 was disabled
+2026-09-17T22:00:47.550Z - info: Using extension handlebars@4.1.1
+2026-09-17T22:00:47.564Z - info: Using extension import-export@4.1.3
+2026-09-17T22:00:48.249Z - info: Using extension jsrender@4.1.0
+2026-09-17T22:00:48.251Z - info: Using extension licensing@4.1.3
+2026-09-17T22:00:48.737Z - info: Using extension localization@4.1.0
+2026-09-17T22:00:48.752Z - info: Using extension npm@4.1.0
+2026-09-17T22:00:48.774Z - info: Using extension pdf-utils@4.5.6
+2026-09-17T22:00:48.807Z - info: Using extension reports@4.3.0
+2026-09-17T22:00:48.833Z - info: Using extension tags@4.1.0
+2026-09-17T22:00:48.852Z - info: Using extension text@4.1.0
+2026-09-17T22:00:48.857Z - info: Using extension version-control@4.2.2
+2026-09-17T22:00:48.948Z - info: Using extension assets@4.3.3
+2026-09-17T22:00:49.124Z - info: Using extension authorization@4.2.0
+2026-09-17T22:00:49.192Z - debug: Extension authorization@4.2.0 was disabled
+2026-09-17T22:00:49.192Z - info: Using extension browser-client@4.2.0
+2026-09-17T22:00:49.251Z - info: Using extension chrome-pdf@4.4.1
+2026-09-17T22:00:49.271Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-09-17T22:00:49.272Z - debug: Chrome custom launch options are protocolTimeout=60000
+2026-09-17T22:00:49.272Z - info: Using extension docx@4.11.1
+2026-09-17T22:00:49.283Z - info: Using extension html-to-xlsx@4.4.3
+2026-09-17T22:00:51.014Z - info: html-to-xlsx detected chrome as available html engine
+2026-09-17T22:00:51.015Z - info: Using extension pptx@4.6.1
+2026-09-17T22:00:51.027Z - info: Using extension scheduling@4.2.0
+2026-09-17T22:00:51.485Z - info: Using extension scripts@4.3.0
+2026-09-17T22:00:51.487Z - info: Using extension static-pdf@4.2.0
+2026-09-17T22:00:51.489Z - info: Using extension studio@4.4.4
+2026-09-17T22:00:52.424Z - info: Using extension xlsx@4.8.1
+2026-09-17T22:00:52.441Z - info: Using extension public-templates@4.1.3
+2026-09-17T22:00:52.443Z - debug: Extension public-templates@4.1.3 was disabled
+2026-09-17T22:00:52.443Z - info: Using extension sample-template@4.1.0
+2026-09-17T22:00:52.458Z - info: Using extension studio-theme-dark@4.1.0
+2026-09-17T22:00:52.486Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2026-09-17T22:00:52.487Z - warn: options.allowLocalFilesAccess is deprecated, use options.trustUserCode instead
+2026-09-17T22:00:52.487Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-09-17T22:00:52.487Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-09-17T22:00:52.542Z - debug: studio default theme is: light
+2026-09-17T22:00:52.544Z - info: Creating default express app.
+2026-09-17T22:00:53.081Z - info: jsreport server successfully started on http port: 5488
+2026-09-17T22:00:53.081Z - info: Verifying license key free
+2026-09-17T22:00:53.082Z - info: Using free license
+2026-09-17T22:00:53.084Z - info: pdf footers check started
+2026-09-17T22:00:53.084Z - info: pdf footers check finished without found problems
+2026-09-17T22:00:53.087Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2026-09-17T22:00:53.088Z - info: Migration successful
+2026-09-17T22:00:53.088Z - debug: Creating samples is disabled
+2026-09-17T22:00:53.089Z - info: Initializing worker threads
+2026-09-17T22:00:53.089Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2026-09-17T22:00:55.053Z - info: 2 worker threads initialized in 1965ms
+2026-09-17T22:00:55.053Z - info: Starting temp files cleanup with 180000ms threshold
+2026-09-17T22:00:55.054Z - info: reporter initialized
+2026-09-17T22:00:58.726Z - debug: OData query on templates
+2026-09-17T22:00:58.730Z - debug: OData query on settings
+2026-09-17T22:00:58.732Z - debug: OData query on folders
+2026-09-17T22:00:58.741Z - debug: OData query on components
+2026-09-17T22:00:58.745Z - debug: OData query on data
+2026-09-17T22:00:58.747Z - debug: OData query on tags
+2026-09-17T22:00:58.750Z - debug: OData query on assets
+2026-09-17T22:00:58.752Z - debug: OData query on scripts
+2026-09-17T22:00:58.755Z - debug: OData query on schedules
+2026-09-17T22:00:58.822Z - debug: OData query on templates
+2026-09-17T22:00:58.846Z - debug: OData query on profiles
+2026-09-17T22:00:58.851Z - debug: OData query on profiles
+2026-09-17T22:00:58.858Z - debug: OData query on profiles
+2026-09-17T22:00:58.862Z - debug: OData query on profiles
+2026-09-17T22:00:58.866Z - debug: OData query on profiles
+2026-09-17T22:00:58.871Z - debug: OData query on profiles
+2026-09-17T22:00:58.873Z - debug: OData query on templates
+2026-09-17T22:06:26.612Z - info: Initializing jsreport (version: 4.14.2, configuration file: none, nodejs: 26.9.0)
+2026-09-17T22:06:26.619Z - info: Searching for available extensions in C:\Users\CCOSTA428\Documents\Samir\Sistema\
+2026-09-17T22:06:26.624Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\CCOSTA428\Documents\Samir\Sistema\
+2026-09-17T22:06:26.768Z - info: Found 35 extension(s)
+2026-09-17T22:06:26.821Z - debug: Writing extension locations cache to C:\Users\CCOSTA~1\AppData\Local\Temp\jsreport\core\locations.json
+2026-09-17T22:06:26.822Z - debug: Discovered 35 extensions
+2026-09-17T22:06:26.848Z - debug: Extension authentication@4.3.3 is disabled, skipping
+2026-09-17T22:06:26.849Z - info: Using extension base@4.1.0
+2026-09-17T22:06:26.856Z - info: Using extension child-templates@4.2.0
+2026-09-17T22:06:26.859Z - debug: Extension cli@4.2.3 is disabled, skipping
+2026-09-17T22:06:26.859Z - info: Using extension components@4.1.0
+2026-09-17T22:06:26.862Z - info: Using extension data@4.2.0
+2026-09-17T22:06:26.864Z - info: Using extension express@4.3.4
+2026-09-17T22:06:27.670Z - info: Using extension freeze@4.1.0
+2026-09-17T22:06:27.672Z - info: Using extension fs-store@4.2.1
+2026-09-17T22:06:28.015Z - debug: Extension fs-store@4.2.1 was disabled
+2026-09-17T22:06:28.015Z - info: Using extension handlebars@4.1.1
+2026-09-17T22:06:28.017Z - info: Using extension import-export@4.1.3
+2026-09-17T22:06:28.165Z - info: Using extension jsrender@4.1.0
+2026-09-17T22:06:28.166Z - info: Using extension licensing@4.1.3
+2026-09-17T22:06:28.237Z - info: Using extension localization@4.1.0
+2026-09-17T22:06:28.238Z - info: Using extension npm@4.1.0
+2026-09-17T22:06:28.240Z - info: Using extension pdf-utils@4.5.6
+2026-09-17T22:06:28.242Z - info: Using extension reports@4.3.0
+2026-09-17T22:06:28.245Z - info: Using extension tags@4.1.0
+2026-09-17T22:06:28.247Z - info: Using extension text@4.1.0
+2026-09-17T22:06:28.248Z - info: Using extension version-control@4.2.2
+2026-09-17T22:06:28.268Z - info: Using extension assets@4.3.3
+2026-09-17T22:06:28.290Z - info: Using extension authorization@4.2.0
+2026-09-17T22:06:28.295Z - debug: Extension authorization@4.2.0 was disabled
+2026-09-17T22:06:28.295Z - info: Using extension browser-client@4.2.0
+2026-09-17T22:06:28.300Z - info: Using extension chrome-pdf@4.4.1
+2026-09-17T22:06:28.303Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-09-17T22:06:28.303Z - debug: Chrome custom launch options are protocolTimeout=60000
+2026-09-17T22:06:28.303Z - info: Using extension docx@4.11.1
+2026-09-17T22:06:28.306Z - info: Using extension html-to-xlsx@4.4.3
+2026-09-17T22:06:28.516Z - info: html-to-xlsx detected chrome as available html engine
+2026-09-17T22:06:28.516Z - info: Using extension pptx@4.6.1
+2026-09-17T22:06:28.518Z - info: Using extension scheduling@4.2.0
+2026-09-17T22:06:28.553Z - info: Using extension scripts@4.3.0
+2026-09-17T22:06:28.554Z - info: Using extension static-pdf@4.2.0
+2026-09-17T22:06:28.556Z - info: Using extension studio@4.4.4
+2026-09-17T22:06:28.738Z - info: Using extension xlsx@4.8.1
+2026-09-17T22:06:28.741Z - info: Using extension public-templates@4.1.3
+2026-09-17T22:06:28.742Z - debug: Extension public-templates@4.1.3 was disabled
+2026-09-17T22:06:28.742Z - info: Using extension sample-template@4.1.0
+2026-09-17T22:06:28.744Z - info: Using extension studio-theme-dark@4.1.0
+2026-09-17T22:06:28.745Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2026-09-17T22:06:28.745Z - warn: options.allowLocalFilesAccess is deprecated, use options.trustUserCode instead
+2026-09-17T22:06:28.746Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-09-17T22:06:28.746Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-09-17T22:06:28.754Z - debug: studio default theme is: light
+2026-09-17T22:06:28.756Z - info: Creating default express app.
+2026-09-17T22:06:28.802Z - info: jsreport server successfully started on http port: 5488
+2026-09-17T22:06:28.804Z - info: Verifying license key free
+2026-09-17T22:06:28.805Z - info: Using free license
+2026-09-17T22:06:28.807Z - info: pdf footers check started
+2026-09-17T22:06:28.807Z - info: pdf footers check finished without found problems
+2026-09-17T22:06:28.809Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2026-09-17T22:06:28.810Z - info: Migration successful
+2026-09-17T22:06:28.810Z - debug: Creating samples is disabled
+2026-09-17T22:06:28.810Z - info: Initializing worker threads
+2026-09-17T22:06:28.810Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2026-09-17T22:06:29.361Z - info: 2 worker threads initialized in 551ms
+2026-09-17T22:06:29.361Z - info: Starting temp files cleanup with 180000ms threshold
+2026-09-17T22:06:29.362Z - info: reporter initialized
+2026-09-17T22:06:54.966Z - debug: OData query on templates
+2026-09-17T22:06:54.971Z - debug: OData query on settings
+2026-09-17T22:06:54.972Z - debug: OData query on folders
+2026-09-17T22:06:54.986Z - debug: OData query on components
+2026-09-17T22:06:54.993Z - debug: OData query on data
+2026-09-17T22:06:55.002Z - debug: OData query on tags
+2026-09-17T22:06:55.005Z - debug: OData query on assets
+2026-09-17T22:06:55.008Z - debug: OData query on scripts
+2026-09-17T22:06:55.010Z - debug: OData query on schedules
+2026-09-17T22:06:55.037Z - debug: OData query on templates
+2026-09-17T22:06:55.057Z - debug: OData query on profiles
+2026-09-17T22:06:55.065Z - debug: OData query on profiles
+2026-09-17T22:06:55.074Z - debug: OData query on profiles
+2026-09-17T22:06:55.082Z - debug: OData query on profiles
+2026-09-17T22:06:55.089Z - debug: OData query on profiles
+2026-09-17T22:06:55.093Z - debug: OData query on profiles
+2026-09-17T22:06:55.098Z - debug: OData query on templates
+2026-09-17T22:21:52.916Z - info: Initializing jsreport (version: 4.14.2, configuration file: none, nodejs: 26.9.0)
+2026-09-17T22:21:52.924Z - info: Searching for available extensions in C:\Users\CCOSTA428\Documents\Samir\Sistema\
+2026-09-17T22:21:52.932Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\CCOSTA428\Documents\Samir\Sistema\
+2026-09-17T22:21:53.059Z - info: Found 35 extension(s)
+2026-09-17T22:21:53.149Z - debug: Writing extension locations cache to C:\Users\CCOSTA~1\AppData\Local\Temp\jsreport\core\locations.json
+2026-09-17T22:21:53.152Z - debug: Discovered 35 extensions
+2026-09-17T22:21:53.178Z - debug: Extension authentication@4.3.3 is disabled, skipping
+2026-09-17T22:21:53.178Z - info: Using extension base@4.1.0
+2026-09-17T22:21:53.185Z - info: Using extension child-templates@4.2.0
+2026-09-17T22:21:53.188Z - debug: Extension cli@4.2.3 is disabled, skipping
+2026-09-17T22:21:53.188Z - info: Using extension components@4.1.0
+2026-09-17T22:21:53.191Z - info: Using extension data@4.2.0
+2026-09-17T22:21:53.192Z - info: Using extension express@4.3.4
+2026-09-17T22:21:54.251Z - info: Using extension freeze@4.1.0
+2026-09-17T22:21:54.257Z - info: Using extension fs-store@4.2.1
+2026-09-17T22:21:54.620Z - debug: Extension fs-store@4.2.1 was disabled
+2026-09-17T22:21:54.620Z - info: Using extension handlebars@4.1.1
+2026-09-17T22:21:54.623Z - info: Using extension import-export@4.1.3
+2026-09-17T22:21:54.788Z - info: Using extension jsrender@4.1.0
+2026-09-17T22:21:54.789Z - info: Using extension licensing@4.1.3
+2026-09-17T22:21:54.864Z - info: Using extension localization@4.1.0
+2026-09-17T22:21:54.866Z - info: Using extension npm@4.1.0
+2026-09-17T22:21:54.872Z - info: Using extension pdf-utils@4.5.6
+2026-09-17T22:21:54.876Z - info: Using extension reports@4.3.0
+2026-09-17T22:21:54.882Z - info: Using extension tags@4.1.0
+2026-09-17T22:21:54.885Z - info: Using extension text@4.1.0
+2026-09-17T22:21:54.887Z - info: Using extension version-control@4.2.2
+2026-09-17T22:21:54.917Z - info: Using extension assets@4.3.3
+2026-09-17T22:21:54.952Z - info: Using extension authorization@4.2.0
+2026-09-17T22:21:54.964Z - debug: Extension authorization@4.2.0 was disabled
+2026-09-17T22:21:54.964Z - info: Using extension browser-client@4.2.0
+2026-09-17T22:21:54.971Z - info: Using extension chrome-pdf@4.4.1
+2026-09-17T22:21:54.976Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-09-17T22:21:54.977Z - debug: Chrome custom launch options are protocolTimeout=60000
+2026-09-17T22:21:54.977Z - info: Using extension docx@4.11.1
+2026-09-17T22:21:54.981Z - info: Using extension html-to-xlsx@4.4.3
+2026-09-17T22:21:55.346Z - info: html-to-xlsx detected chrome as available html engine
+2026-09-17T22:21:55.346Z - info: Using extension pptx@4.6.1
+2026-09-17T22:21:55.350Z - info: Using extension scheduling@4.2.0
+2026-09-17T22:21:55.408Z - info: Using extension scripts@4.3.0
+2026-09-17T22:21:55.410Z - info: Using extension static-pdf@4.2.0
+2026-09-17T22:21:55.411Z - info: Using extension studio@4.4.4
+2026-09-17T22:21:55.660Z - info: Using extension xlsx@4.8.1
+2026-09-17T22:21:55.663Z - info: Using extension public-templates@4.1.3
+2026-09-17T22:21:55.666Z - debug: Extension public-templates@4.1.3 was disabled
+2026-09-17T22:21:55.666Z - info: Using extension sample-template@4.1.0
+2026-09-17T22:21:55.671Z - info: Using extension studio-theme-dark@4.1.0
+2026-09-17T22:21:55.675Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2026-09-17T22:21:55.675Z - warn: options.allowLocalFilesAccess is deprecated, use options.trustUserCode instead
+2026-09-17T22:21:55.675Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-09-17T22:21:55.675Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-09-17T22:21:55.700Z - debug: studio default theme is: light
+2026-09-17T22:21:55.703Z - info: Creating default express app.
+2026-09-17T22:21:55.757Z - info: jsreport server successfully started on http port: 5488
+2026-09-17T22:21:55.760Z - info: Verifying license key free
+2026-09-17T22:21:55.761Z - info: Using free license
+2026-09-17T22:21:55.764Z - info: pdf footers check started
+2026-09-17T22:21:55.764Z - info: pdf footers check finished without found problems
+2026-09-17T22:21:55.769Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2026-09-17T22:21:55.770Z - info: Migration successful
+2026-09-17T22:21:55.771Z - debug: Creating samples is disabled
+2026-09-17T22:21:55.771Z - info: Initializing worker threads
+2026-09-17T22:21:55.771Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2026-09-17T22:21:56.230Z - info: 2 worker threads initialized in 459ms
+2026-09-17T22:21:56.231Z - info: Starting temp files cleanup with 180000ms threshold
+2026-09-17T22:21:56.231Z - info: reporter initialized
+2026-09-17T22:24:17.550Z - info: Render request 1 queued for execution and waiting for available worker rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:17.599Z - info: Starting rendering request 1 rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:17.601Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:17.601Z - debug: Inline data specified. rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:17.604Z - debug: Base url not specified, skipping its injection. rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:17.608Z - debug: Rendering engine handlebars rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:20.352Z - debug: Executing recipe chrome-pdf rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:22.900Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:23.094Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/448bdaed-ab0f-7d9c-55e8-c3cac437cfec-chrome-pdf.html rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:23.189Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/448bdaed-ab0f-7d9c-55e8-c3cac437cfec-chrome-pdf.html rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:23.246Z - debug: Running chrome with params {"timeout":56844,"margin":{},"printBackground":true} rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:23.549Z - debug: Skipping storing report. rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:24:23.549Z - info: Rendering request 1 finished in 6003 ms rootId=cc253gor7hgendw, id=cc253gor7hgendw
+2026-09-17T22:26:40.377Z - info: Render request 2 queued for execution and waiting for available worker rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:40.434Z - info: Starting rendering request 2 rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:40.437Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:40.438Z - debug: Inline data specified. rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:40.445Z - debug: Base url not specified, skipping its injection. rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:40.453Z - debug: Rendering engine handlebars rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:41.082Z - debug: Executing recipe chrome-pdf rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:42.687Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:42.876Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/93e6fd0c-34fd-5a44-1643-ddbdcf476095-chrome-pdf.html rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:42.945Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/93e6fd0c-34fd-5a44-1643-ddbdcf476095-chrome-pdf.html rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:43.005Z - debug: Running chrome with params {"timeout":58962,"margin":{},"printBackground":true} rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:43.335Z - debug: Skipping storing report. rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-17T22:26:43.335Z - info: Rendering request 2 finished in 2965 ms rootId=a665ompexqydg8b, id=a665ompexqydg8b
+2026-09-18T12:46:23.841Z - info: Render request 3 queued for execution and waiting for available worker rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:23.992Z - info: Starting rendering request 3 rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:23.998Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:23.998Z - debug: Inline data specified. rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:24.013Z - debug: Base url not specified, skipping its injection. rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:24.027Z - debug: Rendering engine handlebars rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:24.107Z - debug: Executing recipe chrome-pdf rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:27.031Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:27.147Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/d340092f-4aab-f64d-ffa2-71ca368396da-chrome-pdf.html rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:27.190Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/d340092f-4aab-f64d-ffa2-71ca368396da-chrome-pdf.html rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:27.214Z - debug: Running chrome with params {"timeout":59690,"margin":{},"printBackground":true} rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:27.539Z - debug: Skipping storing report. rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T12:46:27.539Z - info: Rendering request 3 finished in 3732 ms rootId=2pqap4uimwgtao9, id=2pqap4uimwgtao9
+2026-09-18T14:42:27.548Z - info: Render request 4 queued for execution and waiting for available worker rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:27.697Z - info: Starting rendering request 4 rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:27.701Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:27.702Z - debug: Inline data specified. rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:27.717Z - debug: Base url not specified, skipping its injection. rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:27.724Z - debug: Rendering engine handlebars rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:27.820Z - debug: Executing recipe chrome-pdf rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:29.327Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:29.463Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/c86a24e3-11a7-1b02-c149-34d96fa61a91-chrome-pdf.html rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:29.494Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/c86a24e3-11a7-1b02-c149-34d96fa61a91-chrome-pdf.html rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:29.519Z - debug: Running chrome with params {"timeout":59690,"margin":{},"printBackground":true} rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:29.817Z - debug: Skipping storing report. rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:42:29.818Z - info: Rendering request 4 finished in 2296 ms rootId=0ux37ox7s9km2no, id=0ux37ox7s9km2no
+2026-09-18T14:48:21.457Z - info: Render request 5 queued for execution and waiting for available worker rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:21.552Z - info: Starting rendering request 5 rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:21.555Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:21.556Z - debug: Inline data specified. rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:21.565Z - debug: Base url not specified, skipping its injection. rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:21.573Z - debug: Rendering engine handlebars rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:21.644Z - debug: Executing recipe chrome-pdf rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:22.898Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:22.997Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/d924ea57-bdda-f644-3f26-518929a6ae81-chrome-pdf.html rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:23.019Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/d924ea57-bdda-f644-3f26-518929a6ae81-chrome-pdf.html rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:23.041Z - debug: Running chrome with params {"timeout":59797,"margin":{},"printBackground":true} rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:23.308Z - debug: Skipping storing report. rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:48:23.309Z - info: Rendering request 5 finished in 1861 ms rootId=x4dkygbcko6ymi0, id=x4dkygbcko6ymi0
+2026-09-18T14:53:28.122Z - info: Render request 6 queued for execution and waiting for available worker rootId=cyq75dgugh7ue6g, id=cyq75dgugh7ue6g
+2026-09-18T14:53:28.263Z - info: Starting rendering request 6 rootId=cyq75dgugh7ue6g, id=cyq75dgugh7ue6g
+2026-09-18T14:53:28.343Z - warn: Error when processing render request 6
+(because) template must contains _id, name, shortid or content attribute
+Error: Template must contains _id, name, shortid or content attribute
+    at module.exports (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+    at WorkerReporter.createError (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+    at AsyncFunction.<anonymous> (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\templates.js:14:24)
+    at ListenerCollection.fire (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:32)
+    at async beforeRender (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:24:5)
+    at async WorkerReporter._render (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:147:7)
+    at async C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+    at async processAndResponse (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=cyq75dgugh7ue6g, id=cyq75dgugh7ue6g
+2026-09-18T14:53:28.343Z - warn: Rendering request 6 finished with error in 253 ms rootId=cyq75dgugh7ue6g, id=cyq75dgugh7ue6g
+2026-09-18T14:53:28.398Z - warn: Error during processing request at http://localhost:5488/api/report
+2026-09-18T14:53:41.155Z - info: Render request 7 queued for execution and waiting for available worker rootId=mqd1anglqpmjapu, id=mqd1anglqpmjapu
+2026-09-18T14:53:41.220Z - info: Starting rendering request 7 rootId=mqd1anglqpmjapu, id=mqd1anglqpmjapu
+2026-09-18T14:53:41.240Z - warn: Error when processing render request 7
+(because) template must contains _id, name, shortid or content attribute
+Error: Template must contains _id, name, shortid or content attribute
+    at module.exports (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+    at WorkerReporter.createError (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+    at AsyncFunction.<anonymous> (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\templates.js:14:24)
+    at ListenerCollection.fire (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:32)
+    at async beforeRender (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:24:5)
+    at async WorkerReporter._render (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:147:7)
+    at async C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+    at async processAndResponse (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=mqd1anglqpmjapu, id=mqd1anglqpmjapu
+2026-09-18T14:53:41.240Z - warn: Rendering request 7 finished with error in 88 ms rootId=mqd1anglqpmjapu, id=mqd1anglqpmjapu
+2026-09-18T14:53:41.245Z - warn: Error during processing request at http://localhost:5488/api/report
+2026-09-18T14:54:27.910Z - info: Initializing jsreport (version: 4.14.2, configuration file: none, nodejs: 26.9.0)
+2026-09-18T14:54:27.919Z - info: Searching for available extensions in C:\Users\CCOSTA428\Documents\Samir\Sistema\
+2026-09-18T14:54:27.931Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\CCOSTA428\Documents\Samir\Sistema\
+2026-09-18T14:54:28.081Z - info: Found 35 extension(s)
+2026-09-18T14:54:28.810Z - debug: Writing extension locations cache to C:\Users\CCOSTA~1\AppData\Local\Temp\jsreport\core\locations.json
+2026-09-18T14:54:28.812Z - debug: Discovered 35 extensions
+2026-09-18T14:54:28.858Z - debug: Extension authentication@4.3.3 is disabled, skipping
+2026-09-18T14:54:28.859Z - info: Using extension base@4.1.0
+2026-09-18T14:54:28.875Z - info: Using extension child-templates@4.2.0
+2026-09-18T14:54:28.889Z - debug: Extension cli@4.2.3 is disabled, skipping
+2026-09-18T14:54:28.890Z - info: Using extension components@4.1.0
+2026-09-18T14:54:28.913Z - info: Using extension data@4.2.0
+2026-09-18T14:54:28.927Z - info: Using extension express@4.3.4
+2026-09-18T14:54:36.965Z - info: Using extension freeze@4.1.0
+2026-09-18T14:54:36.977Z - info: Using extension fs-store@4.2.1
+2026-09-18T14:54:39.647Z - debug: Extension fs-store@4.2.1 was disabled
+2026-09-18T14:54:39.648Z - info: Using extension handlebars@4.1.1
+2026-09-18T14:54:39.669Z - info: Using extension import-export@4.1.3
+2026-09-18T14:54:40.676Z - info: Using extension jsrender@4.1.0
+2026-09-18T14:54:40.695Z - info: Using extension licensing@4.1.3
+2026-09-18T14:54:41.443Z - info: Using extension localization@4.1.0
+2026-09-18T14:54:41.455Z - info: Using extension npm@4.1.0
+2026-09-18T14:54:41.473Z - info: Using extension pdf-utils@4.5.6
+2026-09-18T14:54:41.505Z - info: Using extension reports@4.3.0
+2026-09-18T14:54:41.525Z - info: Using extension tags@4.1.0
+2026-09-18T14:54:41.557Z - info: Using extension text@4.1.0
+2026-09-18T14:54:41.571Z - info: Using extension version-control@4.2.2
+2026-09-18T14:54:41.706Z - info: Using extension assets@4.3.3
+2026-09-18T14:54:41.918Z - info: Using extension authorization@4.2.0
+2026-09-18T14:54:41.975Z - debug: Extension authorization@4.2.0 was disabled
+2026-09-18T14:54:41.975Z - info: Using extension browser-client@4.2.0
+2026-09-18T14:54:42.021Z - info: Using extension chrome-pdf@4.4.1
+2026-09-18T14:54:42.037Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2026-09-18T14:54:42.038Z - debug: Chrome custom launch options are protocolTimeout=60000
+2026-09-18T14:54:42.038Z - info: Using extension docx@4.11.1
+2026-09-18T14:54:42.050Z - info: Using extension html-to-xlsx@4.4.3
+2026-09-18T14:54:44.213Z - info: html-to-xlsx detected chrome as available html engine
+2026-09-18T14:54:44.213Z - info: Using extension pptx@4.6.1
+2026-09-18T14:54:44.226Z - info: Using extension scheduling@4.2.0
+2026-09-18T14:54:44.763Z - info: Using extension scripts@4.3.0
+2026-09-18T14:54:44.780Z - info: Using extension static-pdf@4.2.0
+2026-09-18T14:54:44.793Z - info: Using extension studio@4.4.4
+2026-09-18T14:54:45.988Z - info: Using extension xlsx@4.8.1
+2026-09-18T14:54:46.003Z - info: Using extension public-templates@4.1.3
+2026-09-18T14:54:46.023Z - debug: Extension public-templates@4.1.3 was disabled
+2026-09-18T14:54:46.023Z - info: Using extension sample-template@4.1.0
+2026-09-18T14:54:46.041Z - info: Using extension studio-theme-dark@4.1.0
+2026-09-18T14:54:46.063Z - info: Code sandboxing is disabled, users can potentially penetrate the local system if you allow code from external users to be part of your reports
+2026-09-18T14:54:46.063Z - warn: options.allowLocalFilesAccess is deprecated, use options.trustUserCode instead
+2026-09-18T14:54:46.063Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2026-09-18T14:54:46.063Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2026-09-18T14:54:46.123Z - debug: studio default theme is: light
+2026-09-18T14:54:46.127Z - info: Creating default express app.
+2026-09-18T14:54:46.690Z - info: jsreport server successfully started on http port: 5488
+2026-09-18T14:54:46.691Z - info: Verifying license key free
+2026-09-18T14:54:46.693Z - info: Using free license
+2026-09-18T14:54:46.695Z - info: pdf footers check started
+2026-09-18T14:54:46.696Z - info: pdf footers check finished without found problems
+2026-09-18T14:54:46.698Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2026-09-18T14:54:46.698Z - info: Migration successful
+2026-09-18T14:54:46.698Z - debug: Creating samples is disabled
+2026-09-18T14:54:46.699Z - info: Initializing worker threads
+2026-09-18T14:54:46.699Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2026-09-18T14:54:49.264Z - info: 2 worker threads initialized in 2565ms
+2026-09-18T14:54:49.265Z - info: Starting temp files cleanup with 180000ms threshold
+2026-09-18T14:54:49.265Z - info: reporter initialized
+2026-09-18T14:56:59.357Z - info: Render request 1 queued for execution and waiting for available worker rootId=2lr6u7czzdev84x, id=2lr6u7czzdev84x
+2026-09-18T14:56:59.420Z - info: Starting rendering request 1 rootId=2lr6u7czzdev84x, id=2lr6u7czzdev84x
+2026-09-18T14:56:59.427Z - warn: Error when processing render request 1
+(because) template must contains _id, name, shortid or content attribute
+Error: Template must contains _id, name, shortid or content attribute
+    at module.exports (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+    at WorkerReporter.createError (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+    at AsyncFunction.<anonymous> (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\templates.js:14:24)
+    at ListenerCollection.fire (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:32)
+    at async beforeRender (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:24:5)
+    at async WorkerReporter._render (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:147:7)
+    at async C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+    at async processAndResponse (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=2lr6u7czzdev84x, id=2lr6u7czzdev84x
+2026-09-18T14:56:59.427Z - warn: Rendering request 1 finished with error in 83 ms rootId=2lr6u7czzdev84x, id=2lr6u7czzdev84x
+2026-09-18T14:56:59.438Z - warn: Error during processing request at http://localhost:5488/api/report
+2026-09-18T15:05:16.508Z - info: Render request 2 queued for execution and waiting for available worker rootId=ol9uob240k5h705, id=ol9uob240k5h705
+2026-09-18T15:05:16.579Z - info: Starting rendering request 2 rootId=ol9uob240k5h705, id=ol9uob240k5h705
+2026-09-18T15:05:16.595Z - warn: Error when processing render request 2
+(because) template must contains _id, name, shortid or content attribute
+Error: Template must contains _id, name, shortid or content attribute
+    at module.exports (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\createError.js:10:13)
+    at WorkerReporter.createError (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\reporter.js:53:12)
+    at AsyncFunction.<anonymous> (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\templates.js:14:24)
+    at ListenerCollection.fire (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\shared\listenerCollection.js:157:32)
+    at async beforeRender (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:24:5)
+    at async WorkerReporter._render (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\render\render.js:147:7)
+    at async C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\jsreport-core\lib\worker\reporter.js:234:24
+    at async processAndResponse (C:\Users\CCOSTA428\Documents\Samir\Sistema\node_modules\@jsreport\advanced-workers\lib\workerHandler.js:42:17) rootId=ol9uob240k5h705, id=ol9uob240k5h705
+2026-09-18T15:05:16.595Z - warn: Rendering request 2 finished with error in 97 ms rootId=ol9uob240k5h705, id=ol9uob240k5h705
+2026-09-18T15:05:16.607Z - warn: Error during processing request at http://localhost:5488/api/report
+2026-09-18T15:06:57.563Z - info: Render request 3 queued for execution and waiting for available worker rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:06:57.596Z - info: Starting rendering request 3 rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:06:57.597Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:06:57.600Z - debug: Inline data specified. rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:06:57.614Z - debug: Base url not specified, skipping its injection. rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:06:57.626Z - debug: Rendering engine handlebars rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:07:02.212Z - debug: Executing recipe chrome-pdf rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:07:05.584Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:07:05.675Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/940ca1c3-aba5-0cf4-2f5a-7c37690a846c-chrome-pdf.html rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:07:05.735Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/940ca1c3-aba5-0cf4-2f5a-7c37690a846c-chrome-pdf.html rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:07:05.785Z - debug: Running chrome with params {"timeout":54892,"margin":{},"printBackground":true} rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:07:06.187Z - debug: Skipping storing report. rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:07:06.187Z - info: Rendering request 3 finished in 8639 ms rootId=98k3f93goao94lj, id=98k3f93goao94lj
+2026-09-18T15:31:13.884Z - info: Render request 4 queued for execution and waiting for available worker rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:13.931Z - info: Starting rendering request 4 rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:13.931Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:13.945Z - debug: Inline data specified. rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:13.960Z - debug: Base url not specified, skipping its injection. rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:13.981Z - debug: Rendering engine handlebars rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:14.846Z - debug: Executing recipe chrome-pdf rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:16.815Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:17.137Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/70d0ed52-e1a2-60cc-2ceb-f197468dec43-chrome-pdf.html rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:17.181Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/70d0ed52-e1a2-60cc-2ceb-f197468dec43-chrome-pdf.html rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:17.228Z - debug: Running chrome with params {"timeout":58586,"margin":{},"printBackground":true} rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:17.512Z - debug: Skipping storing report. rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:17.512Z - info: Rendering request 4 finished in 3645 ms rootId=g10tikudurafv1q, id=g10tikudurafv1q
+2026-09-18T15:31:33.353Z - info: Render request 5 queued for execution and waiting for available worker rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.465Z - info: Starting rendering request 5 rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.470Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.471Z - debug: Inline data specified. rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.483Z - debug: Base url not specified, skipping its injection. rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.495Z - debug: Rendering engine handlebars rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.611Z - debug: Executing recipe chrome-pdf rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.630Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.867Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/21de97f0-6e39-e24f-94c8-96910e9f14bb-chrome-pdf.html rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.892Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/21de97f0-6e39-e24f-94c8-96910e9f14bb-chrome-pdf.html rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:33.901Z - debug: Running chrome with params {"timeout":59729,"margin":{},"printBackground":true} rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:34.101Z - debug: Skipping storing report. rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:34.101Z - info: Rendering request 5 finished in 751 ms rootId=ubq7hca59eno7ay, id=ubq7hca59eno7ay
+2026-09-18T15:31:39.934Z - info: Render request 6 queued for execution and waiting for available worker rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:39.938Z - info: Starting rendering request 6 rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:39.938Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:39.938Z - debug: Inline data specified. rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:39.940Z - debug: Base url not specified, skipping its injection. rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:39.941Z - debug: Rendering engine handlebars rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:39.946Z - debug: Executing recipe chrome-pdf rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:39.947Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:40.063Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/11f9a449-acc4-f7d1-34f9-77ddc2873314-chrome-pdf.html rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:40.079Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/11f9a449-acc4-f7d1-34f9-77ddc2873314-chrome-pdf.html rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:40.089Z - debug: Running chrome with params {"timeout":59982,"margin":{},"printBackground":true} rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:40.265Z - debug: Skipping storing report. rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T15:31:40.265Z - info: Rendering request 6 finished in 336 ms rootId=0qj8isw4910jxol, id=0qj8isw4910jxol
+2026-09-18T16:07:39.260Z - info: Render request 7 queued for execution and waiting for available worker rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:39.321Z - info: Starting rendering request 7 rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:39.323Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:39.324Z - debug: Inline data specified. rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:39.332Z - debug: Base url not specified, skipping its injection. rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:39.339Z - debug: Rendering engine handlebars rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:39.388Z - debug: Executing recipe chrome-pdf rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:39.397Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:40.199Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/c97a3c27-48fd-a93f-dafe-1bceb4002fcb-chrome-pdf.html rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:40.239Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/c97a3c27-48fd-a93f-dafe-1bceb4002fcb-chrome-pdf.html rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:40.253Z - debug: Running chrome with params {"timeout":59856,"margin":{},"printBackground":true} rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:40.510Z - debug: Skipping storing report. rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:07:40.510Z - info: Rendering request 7 finished in 1260 ms rootId=dzhhozjcec50gal, id=dzhhozjcec50gal
+2026-09-18T16:14:49.102Z - info: Render request 8 queued for execution and waiting for available worker rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:49.242Z - info: Starting rendering request 8 rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:49.251Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:49.252Z - debug: Inline data specified. rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:49.267Z - debug: Base url not specified, skipping its injection. rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:49.279Z - debug: Rendering engine handlebars rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:49.408Z - debug: Executing recipe chrome-pdf rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:49.433Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:50.835Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/1165a965-0b5d-c790-72a1-8fe4f797a333-chrome-pdf.html rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:50.891Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/1165a965-0b5d-c790-72a1-8fe4f797a333-chrome-pdf.html rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:50.925Z - debug: Running chrome with params {"timeout":59646,"margin":{},"printBackground":true} rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:51.193Z - debug: Skipping storing report. rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:14:51.193Z - info: Rendering request 8 finished in 2122 ms rootId=xirhh4w73ndj8zk, id=xirhh4w73ndj8zk
+2026-09-18T16:15:15.994Z - info: Render request 9 queued for execution and waiting for available worker rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.062Z - info: Starting rendering request 9 rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.064Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars } rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.064Z - debug: Inline data specified. rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.069Z - debug: Base url not specified, skipping its injection. rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.075Z - debug: Rendering engine handlebars rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.113Z - debug: Executing recipe chrome-pdf rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.122Z - debug: Converting with chrome Chrome/151.0.7922.47 using chrome-pool strategy rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.710Z - debug: Page request: GET (document) file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/7c8b2c75-1030-b964-ffe5-991821e3133f-chrome-pdf.html rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.759Z - debug: Page request finished: GET (document) 200 file:///C:/Users/CCOSTA%7E1/AppData/Local/Temp/jsreport/autocleanup/7c8b2c75-1030-b964-ffe5-991821e3133f-chrome-pdf.html rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:16.790Z - debug: Running chrome with params {"timeout":59871,"margin":{},"printBackground":true} rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:17.027Z - debug: Skipping storing report. rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
+2026-09-18T16:15:17.027Z - info: Rendering request 9 finished in 1038 ms rootId=3qjl7iy0778jg4p, id=3qjl7iy0778jg4p
